@@ -86,12 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         txt = (TextView) findViewById(R.id.t1);
         bt = (Button) findViewById(R.id.b1);
+        bt = (Button) findViewById(R.id.b2);
         bt.setOnClickListener(this);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
     public void execute(View view){
         txt.setText("WELCOME TO CSE");
